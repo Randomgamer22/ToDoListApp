@@ -1,0 +1,2 @@
+- Is the goal clear for the user? - Does the user clearly know what they are coming on the app for? - Do they know what they have to do, when they are on your app?
+- Does the user get clear feedback on their actions? - Do they know if they have been able to do something successfully or not? - What is the ideal user behavior we want on the app? - Does the app give feedback to encourage that?
