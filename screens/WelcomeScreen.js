@@ -44,6 +44,7 @@ export default class WelcomeScreen extends React.Component {
               <TextInput
                 style={styles.formTextInput}
                 placeholder="first name"
+                placeholderTextColor = "#8ed4b7"
                 maxLength={15}
                 onChangeText={(text) => {
                   this.setState({ firstName: text });
@@ -52,6 +53,7 @@ export default class WelcomeScreen extends React.Component {
               <TextInput
                 style={styles.formTextInput}
                 placeholder="last name"
+                placeholderTextColor = "#8ed4b7"
                 maxLength={15}
                 onChangeText={(text) => {
                   this.setState({ lastName: text });
@@ -60,6 +62,7 @@ export default class WelcomeScreen extends React.Component {
               <TextInput
                 style={styles.formTextInput}
                 placeholder="address"
+                placeholderTextColor = "#8ed4b7"
                 multiline={true}
                 onChangeText={(text) => {
                   this.setState({ address: text });
@@ -68,6 +71,7 @@ export default class WelcomeScreen extends React.Component {
               <TextInput
                 style={styles.formTextInput}
                 placeholder="contact"
+                placeholderTextColor = "#8ed4b7"
                 maxLength={10}
                 onChangeText={(text) => {
                   this.setState({ contact: text });
@@ -77,6 +81,7 @@ export default class WelcomeScreen extends React.Component {
                 style={styles.formTextInput}
                 placeholder="email"
                 keyboardType="email-address"
+                placeholderTextColor = "#8ed4b7"
                 onChangeText={(text) => {
                   this.setState({ emailId: text });
                 }}
@@ -84,6 +89,7 @@ export default class WelcomeScreen extends React.Component {
               <TextInput
                 style={styles.formTextInput}
                 placeholder="password"
+                placeholderTextColor = "#8ed4b7"
                 secureTextEntry={true}
                 onChangeText={(text) => {
                   this.setState({ password: text });
@@ -92,6 +98,7 @@ export default class WelcomeScreen extends React.Component {
               <TextInput
                 style={styles.formTextInput}
                 placeholder="confirm password"
+                placeholderTextColor = "#8ed4b7"
                 secureTextEntry={true}
                 onChangeText={(text) => {
                   this.setState({ confirmPassword: text });
@@ -138,6 +145,7 @@ export default class WelcomeScreen extends React.Component {
             emailId: this.state.emailId,
             isBookRequestActive: false,
           })
+          Db.collection(this.state.emailId).add({})
           return alert('User added successfully', '', [{
             text: 'ok', onPress: () => {
               this.setState({
@@ -184,6 +192,7 @@ render() {
         <TextInput
           style={styles.loginBox}
           placeholder="abc@gmail.com"
+          placeholderTextColor = "#8ed4b7"
           keyboardType="email-address"
           onChangeText={(text) => {
             this.setState({ emailId: text });
@@ -192,6 +201,7 @@ render() {
         <TextInput
           style={styles.loginBox}
           placeholder="Enter Password"
+          placeholderTextColor = "#8ed4b7"
           secureTextEntry={true}
           onChangeText={(text) => {
             this.setState({ password: text });
@@ -245,7 +255,8 @@ const styles = StyleSheet.create({
     borderColor: '#8ed4b7',
     fontSize: 20,
     margin: 10,
-    paddingLeft: 10
+    paddingLeft: 10,
+    color: '#8ed4b7'
   },
   KeyboardAvoidingView: {
     flex: 1,
